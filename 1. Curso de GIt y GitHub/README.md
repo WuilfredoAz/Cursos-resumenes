@@ -441,7 +441,7 @@ Se diferencia del `git merge [rama]` porque éste condensa todos los commits de 
 * `git cherry-pick [SHA-1]`= Copiar un commit y pegarlo en la rama donde nos encontremos al momento de ejecutar el comando.
   >Nota: Este comando NO corta el commit de un lugar a otro, solo lo copia/clona y lo reubica en la rama donde nos encontremos al comento de ejecutarlo. Si al reubicar hay conflictos, se deben solucionar al igual que una fusión y después ejecutar `cherry-pick --continue`.
 
-* `git merge origin/master --allow-unrated-histories` = Permite realizar merge de ramas que no tienen el mismo histórico de commits.
+* `git merge origin/master --allow-unrelated-histories` = Permite realizar merge de ramas que no tienen el mismo histórico de commits.
 
 * `git push origin "Rama con tags" --tags` = Subir los tags de una rama en específica.
 
