@@ -9,6 +9,8 @@ Este es un repositorio creado con la finalidad de guardar todos los apuntes fís
 - [Curso de Responsive Design](/4.%20Responsive%20Design)
 - [Curso de CSS Grid Layout](/5.%20CSS%20Grid%20Layout)
 - [Curso de Animaciones para la Web](/6.%20Curso%20de%20animaciones%20para%20la%20web)
+- [Curso de HTML desde cero](/7.%20HTML%20desde%20cero)
+
 
 
 ## Buenas prácticas generales
@@ -36,7 +38,7 @@ Este es un repositorio creado con la finalidad de guardar todos los apuntes fís
     * `padding, margin, font. background, border, border-radius`.
     * Prefiere `background-color: #fff;` sobre `background: #fff;`.
 
-* Ordenar el código en cada selector usando la fórmula **PC-TV**:
+* Ordenar el código CSS en cada selector usando la fórmula **PC-TV**:
 
     * (**P**)osicionamiento: `display, float, position, top, left, right, bottom, clear, z-index`.
     * (**C**)aja o modelo de caja: `margin, padding, width, height, border`.
@@ -68,6 +70,23 @@ Este es un repositorio creado con la finalidad de guardar todos los apuntes fís
         background-color: #fff;
     }
 
+    ```
+
+* Otra forma de ordenar el código CSS en cada selector es ordenarlo alfabéticamente (ignorando los prefijos.).
+
+    Ex de alfabéticamente
+    ```css
+    .ejemplo
+    {
+        background: red;
+        border: 1px solid;
+        border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+        color: black;
+        text-align: center;
+        text-indent: 2em;
+    }
     ```
 
 ## Quiero contribuir
