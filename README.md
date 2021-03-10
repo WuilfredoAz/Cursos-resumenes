@@ -10,6 +10,7 @@ Este es un repositorio creado con la finalidad de guardar todos los apuntes fís
 - [Curso de CSS Grid Layout](/5.%20CSS%20Grid%20Layout)
 - [Curso de Animaciones para la Web](/6.%20Curso%20de%20animaciones%20para%20la%20web)
 - [Curso de HTML desde cero](/7.%20HTML%20desde%20cero)
+- [Curso de CSS desde cero](/8.%20CSS%20desde%20cero)
 
 
 
@@ -35,7 +36,7 @@ Este es un repositorio creado con la finalidad de guardar todos los apuntes fís
 
 * Tener precaución con los shorthand de CSS:
 
-    * `padding, margin, font. background, border, border-radius`.
+    * `padding, margin, font, background, border, border-radius`.
     * Prefiere `background-color: #fff;` sobre `background: #fff;`.
 
 * Ordenar el código CSS en cada selector usando la fórmula **PC-TV**:

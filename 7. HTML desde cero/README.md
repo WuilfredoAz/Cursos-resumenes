@@ -1495,7 +1495,7 @@ Si se quisiera hacer más semántico y añadirle elementos opcionales para ident
             <td>Italia</td>
         </tr>
     </tbody>
-    <tfooter>
+    <tfoot>
         <tr>
             <td>Total de personas listadas:</td>
             <td>2</td>
@@ -1583,7 +1583,7 @@ Dicho ejemplo se aprecia visualmente de la siguiente manera:
             <td>Italia</td>
         </tr>
     </tbody>
-    <tfooter>
+    <tfoot>
         <tr>
             <td>Total de personas listadas:</td>
             <td>2</td>
@@ -1697,7 +1697,7 @@ Dicho ejemplo se aprecia visualmente de la siguiente manera:
                 <td>Italia</td>
             </tr>
         </tbody>
-        <tfooter>
+        <tfoot>
             <tr>
                 <td>Total de personas listadas:</td>
                 <td>2</td>
@@ -1742,7 +1742,7 @@ Dicho ejemplo se aprecia visualmente de la siguiente manera:
                 <td>Italia</td>
             </tr>
         </tbody>
-        <tfooter>
+        <tfoot>
             <tr>
                 <td>Total de personas listadas:</td>
                 <td>2</td>
