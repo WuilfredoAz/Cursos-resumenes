@@ -1,7 +1,7 @@
 # CSS desde cero
 
 ## Tabla de contenido
-- [¿Qúe es CSS?](#¿Qué-es-CSS?)
+- [¿Qué es CSS?](#¿Qué-es-CSS?)
 - [¿Cómo importar CSS a un HTML?](#¿Cómo-importar-CSS-a-un-HTML?)
 - [¿Cuál es la sintaxis de CSS?](#¿Cuál-es-la-sintaxis-de-CSS?)
 - [Selectores](#Selectores)
