@@ -1,0 +1,54 @@
+body
+{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.like
+{
+    /* Para que parezca cliqueable */
+    cursor: pointer;
+    /* como cada salto equivale a 100px se hace una caja de 100x100. Pero lo colocamos a la mitad de la resolucion
+    para que sea retina display */
+    height: 100px;
+    width: 100px;
+    /* Cambiamos el tamaño de la imagen segun el contenedor */
+    /* background-size: auto 50px; */
+    /* background-color: red; */
+    background-image: url("corazon2.png");
+}
+
+.like.is-liked
+{
+    /* Estilos para la animacion */
+    animation-name: like;
+    animation-duration: 10s;
+    /* Este es el truco en realidad. Hacemos uso del timing STEPS */
+    animation-timing-function: steps(28);
+    /* con  el sprite sheet como background */
+    /* La imagen tiene un ancho de 2900px / 29 estados que tiene la imagen = 100 (cada salto en X) */
+    /* Le quitamos un paso a los STEPS para quedarnos cuando el elemento aun esta rojo puesto que antes de que la
+    animacion comienza, su estado 1 entonces a partir de ahi empieza a contar. Entonces segun esto el step 29 seria
+    el primer cuadro (el corazon en gris) y el step 28 es el ultimo (cuando esta en rojo).
+    Es decir, no debemos contar la primera posición para contar los steps */
+    /* Nos quedamos en la posicion final */
+    animation-fill-mode: forwards;
+}
+
+@keyframes like
+{
+    0%
+    {
+        background-position: 0 0;
+    }
+    100%
+    {
+       /* La animacion lo que hace es recorrer la imagen */
+        /* background-position: -2800px 0; */
+        background-position-x: right;
+        /* Cualquiera de las dos formas es valida */
+    }
+}

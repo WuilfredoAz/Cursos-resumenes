@@ -1,0 +1,203 @@
+body
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.fireNormal
+{
+    height: 130px;
+    width: 90px;
+    /* border: 1px solid red; */
+
+    background-image: url(fire-tira2.png);
+    animation-name: burning-normal;
+    animation-duration: 3s;
+    animation-timing-function: steps(9);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes burning-normal
+{
+    100%
+    {
+        background-position: right 0;
+    }
+}
+
+.fireInfinito
+{
+    height: 130px;
+    width: 90px;
+    /* border: 1px solid red; */
+
+    background-image: url(fire-tira2.png);
+    animation-name: burning-infinito;
+    animation-duration: 3s;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes burning-infinito
+{
+    100%
+    {
+        background-position: -900px 0;
+    }
+}
+
+
+.sheetaNormal
+{
+    height: 370px;
+    width: 235px;
+    border: 1px solid red;
+
+    background-image: url(sheetas.png);
+    background-size: cover;
+
+    animation-name: sheeta-animation-normal;
+    animation-duration: 10s;
+    animation-timing-function: steps(19);
+    animation-fill-mode: forwards;
+}
+
+@keyframes sheeta-animation-normal
+{
+    100%
+    {
+        background-position: right 0;
+    }
+}
+
+
+.sheetaInfinito
+{
+    height: 370px;
+    width: 235px;
+    border: 1px solid black;
+
+    background-image: url(sheetas.png);
+    background-size: cover;
+
+    animation-name: sheeta-animation-infinito;
+    animation-duration: 10s;
+    animation-timing-function: steps(20);
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes sheeta-animation-infinito
+{
+    100%
+    {
+        /* 235px x 20 fotogramas = 4700px */
+        background-position: -4700px 0;
+    }
+}
+
+
+
+.fuegoNormal
+{
+    height: 140px;
+    width: 90px;
+    /* border: 1px solid red; */
+
+    background-image: url(cuadricula2.png);
+    /* posicionamos el fondo */
+    /* background-position: 497px 0; */
+
+    animation-name: quemandoX-normal, quemandoY-normal;
+    animation-timing-function: steps(4), steps(1);
+    animation-duration: 2.5s, 5s;
+    animation-iteration-count: 2, 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes quemandoX-normal
+{
+    100%
+    {
+        background-position-x: right;
+    }
+}
+
+@keyframes quemandoY-normal
+{
+    50%,100%
+    {
+        background-position-y: bottom;
+    }
+}
+
+.fuegoInfinito
+{
+    height: 140px;
+    width: 90px;
+    /* border: 1px solid red; */
+
+    background-image: url(cuadricula2.png);
+    /* posicionamos el fondo */
+    /* background-position: 497px 0; */
+
+    animation-name: quemandoX-infinito, quemandoY-infinito;
+    animation-timing-function: steps(5), steps(2);
+    animation-duration: 2.5s, 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes quemandoX-infinito
+{
+    100%
+    {
+        background-position: -289px 0;
+    }
+}
+
+@keyframes quemandoY-infinitosss
+{
+    50%,100%
+    {
+        background-position: 0 -438px;
+    }
+}
+
+
+/* .cuadrado
+{
+    width: 512px;
+    height: 512px;
+    border: 1px solid red;
+
+    background: url(cuadrado.png);
+
+    animation-name: correX, correY;
+    animation-duration: 2s, 8s;
+    animation-iteration-count: 2, 3;
+    animation-timing-function: steps(2), steps(3);
+    animation-fill-mode: forwards;
+}
+
+@keyframes correX
+{
+    100%
+    {
+        background-position-x: right;
+    }
+}
+
+@keyframes correY
+{
+    50%,100%
+    {
+        background-position-y: bottom;
+    }
+} */

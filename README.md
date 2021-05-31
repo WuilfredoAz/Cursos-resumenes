@@ -8,6 +8,7 @@ Este es un repositorio creado con la finalidad de guardar todos los apuntes fís
 - [Curso de Desarrollo Web](3.%20Desarrollo%20Web)
 - [Curso de Responsive Design](/4.%20Responsive%20Design)
 - [Curso de CSS Grid Layout](/5.%20CSS%20Grid%20Layout)
+- [Curso de Animaciones para la Web](/6.%20Curso%20de%20animaciones%20para%20la%20web)
 
 
 ## Buenas prácticas generales

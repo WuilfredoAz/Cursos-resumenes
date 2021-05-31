@@ -1,0 +1,114 @@
+body
+{
+    margin: 0;
+    font-family: Arial;
+}
+
+.bg
+{
+    height: 100vh;
+    background-color: #037b60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card
+{
+    background: #fff;
+    width: 400px;
+    height: 125px;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 125px  1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "imagen contenido";
+    overflow: hidden;
+    /* box-shadow: 10px 9px 30px #252525; */
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(.9);
+}
+
+.left
+{
+    grid-area: imagen;
+    background-color: #88ffa2;
+}
+
+.right
+{
+    grid-area: contenido;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.cta
+{
+    position: relative;
+}
+
+.cta::after
+{
+    content: ">";
+    position: absolute;
+    right: -60px;
+    top: 2px;
+    color: #777777;
+    transition: .3s;
+}
+
+.card:hover .cta::after
+{
+    right: -70px;
+    color: #262626;
+}
+
+.animation
+{
+    background-image: url("../img/payAnimation.png");
+    background-size: cover;
+    height: 100%;
+    animation: 1s pay backwards steps(25);
+    animation-direction: reverse;
+}
+
+@keyframes pay
+{
+    0%
+    {
+        background-position: 0 0;
+    }
+    100%
+    {
+        background-position: right 0;
+    }
+}
+
+@keyframes payDos
+{
+    0%
+    {
+        background-position: 0 0;
+    }
+    100%
+    {
+        background-position: right 0;
+    }
+}
+
+
+.card:hover .animation
+{
+    animation: 1s payDos forwards steps(25);
+    animation-direction: normal;
+}
+
+.card:hover
+{
+    transform: scale(1);
+}

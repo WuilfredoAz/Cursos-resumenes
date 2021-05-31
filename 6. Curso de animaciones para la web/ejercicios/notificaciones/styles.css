@@ -1,0 +1,179 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.container
+{
+    height: 100vh;
+    background: #5c7cfa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn
+{
+    font-size: 1.5em;
+    border: none;
+    background: none;
+    border: 1px solid #fff;
+    padding: .5em;
+    border-radius: 8px;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+.btn:hover
+{
+    background: #fff;
+    color: #000;
+}
+.btn:active
+{
+    transform: scale(.9);
+}
+
+/* Usamos los "::" para diferenciar el pseudoelemnte de las pseudoclases */
+/* La campana */
+.campana::before
+{
+    content: "\f0f3";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    /* Para que sea animable debe tener un display diferente a inline */
+    display: block;
+    color: #5c7cfa;
+    font-size: 2em;
+    transform-origin: center top;
+}
+.campana.notify::before
+{
+    animation-name: bell;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.ventana
+{
+    height: 100px;
+    width: 250px;
+    display: grid;
+    grid-template: 1fr / 70px 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+    visibility: hidden;
+}
+.ventana.mostrar
+{
+    animation-name: mostrar;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    visibility: visible;
+}
+.ventana.ocultar
+{
+    animation-name: ocultar;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    visibility: visible;
+    animation-fill-mode: forwards;
+}
+.icono
+{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje
+{
+    font-family: "Roboto";
+    background: #eff2fe;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.mensaje p
+{
+    margin: 0;
+    color: #262626;
+}
+
+/* Para que funcione la funcion de atributo debe estar dentro de un pseudoelemento
+para colocarla como contenido por CSS */
+.contador::after
+{
+    content: attr(data-count);
+    font-weight: 900;
+    color: #000;
+}
+
+@keyframes bell
+{
+    0%
+    {
+        transform: rotate(35deg);
+    }
+    12.5%
+    {
+        transform: rotate(-30deg);
+    }
+    25%
+    {
+        transform: rotate(25deg);
+    }
+    37.5%
+    {
+        transform: rotate(-20deg);
+    }
+    50%
+    {
+        transform: rotate(15deg);
+    }
+    62.5%
+    {
+        transform: rotate(-10deg);
+    }
+    75%
+    {
+        transform: rotate(5deg);
+    }
+    100%
+    {
+        transform: rotate(0);
+    }
+}
+@keyframes mostrar
+{
+    from
+    {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes ocultar
+{
+    from
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to
+    {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
